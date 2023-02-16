@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial</title>
+</head>
+<style>
+        body{
+            background-color: rgb(190, 112, 142);
+        }
+        .titulo1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: 90vh;
+        }
+        .titulo1 .ceu{
+            color: #FFFf;
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .titulo1 .dinamico{
+           margin-top: -20px;
+           height: 90px;
+           overflow: hidden;
+           
+        }
+        .dinamico li{
+            color: black;
+            list-style: none;
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .dinamico li span::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            border-left: 2px solid black ;
+            animation: typing 1.5s steps(10) infinite;
+            background:  rgb(190, 112, 142);
+        }
+        .dinamico li span{
+            position: relative;
+        }
+        @keyframes typing{
+            100%{
+                left: 100%;
+                margin: 0 -35px 0 35px;
+
+            }
+
+        }
+    </style>
+<body>
+    <div class="titulo1">
+        <div class="ceu">Céu <br> de</div> <br>
+        <ul class="dinamico">
+            <li><span>Felicidade</span></li>
+            <li><span>Amor</span></li>
+            <li><span>Brigadeiro</span></li>
+        </ul>
+    </div>
+</body>
+</html>
