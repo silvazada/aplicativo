@@ -28,15 +28,28 @@
         }
         .titulo1 .dinamico{
            margin-top: -20px;
-           height: 90px;
+           height: 53px;
            overflow: hidden;
-           
+           justify-content: center;
+           justify-items: center;
+           align-items: center;
+           align-content: center;
+           text-align: center;
         }
         .dinamico li{
             color: black;
             list-style: none;
             font-size: 50px;
             font-weight: 600;
+            left: 0;
+            position: relative;
+            top: 0;
+            animation: slide 6s steps(4) infinite;
+        }
+        @keyframes slide{
+            100%{
+                top: -250px;
+            }
         }
         .dinamico li span::after{
             content: "";
